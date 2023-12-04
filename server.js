@@ -29,6 +29,7 @@ const io = new Server(server, {
     // origin: "https://online-coding-web-client.vercel.app",
     origin: "*",
     methods: ["GET", "POST"],
+    allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With', 'device-remember-token', 'Access-Control-Allow-Origin', 'Origin', 'Accept'],
     transports: ["polling"],
     credentials: true,
   },
