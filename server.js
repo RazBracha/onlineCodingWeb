@@ -29,7 +29,6 @@ const io = new Server(server, {
     origin: "https://online-coding-web-client.vercel.app",
     methods: ["GET", "POST"],
     credentials: true,
-    ///./
   },
 });
 
