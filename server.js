@@ -42,11 +42,13 @@ io.on("connection", (socket) => {
   socket.emit("user_connected", { user });
 
   socket.on("join_room", (data) => {
+    console.log(`User joined room: ${data}`);
     socket.join(data);
 
   });
 
   socket.on("send_message", (data) => {
+    console.log(`Received message: ${data.messageText} from user ${data.user}`);
     socket.broadcast.emit("receive_message", { ...data, user });
   });
 
