@@ -28,7 +28,7 @@ const io = new Server(server, {
   cors: {
     origin: "https://online-coding-web-client.vercel.app",//client
     methods: ["GET", "POST"],
-    transports: ["polling", "websocket"],
+    transports: ["websocket", "polling"],
     credentials: true,
   },
 });
