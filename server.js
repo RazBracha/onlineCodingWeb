@@ -16,6 +16,9 @@ const app = express();
 app.use(cors());
 app.use(express.json())
 
+codeBlockRouter.use(cors());
+users.use(cors());
+
 // routers
 app.use('/codeblocks', codeBlockRouter)
 app.use('/users', users)
