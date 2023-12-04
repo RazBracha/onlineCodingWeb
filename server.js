@@ -5,6 +5,7 @@ const express = require("express");
 const http = require("http");
 const { Server } = require("socket.io");
 
+
 const cors = require("cors");
 const connectDB = require('./configs/db');
 const codeBlockRouter = require('./routers/codeBlockRouter');
@@ -24,10 +25,10 @@ connectDB();
 const server = http.createServer(app);
 
 const io = new Server(server, {
-  transports: ["websocket"],
   cors: {
     origin: "https://online-coding-web-client.vercel.app",//client
     methods: ["GET", "POST"],
+    credentials: true,
   },
 });
 
