@@ -26,7 +26,8 @@ const server = http.createServer(app);
 
 const io = new Server(server, {
   cors: {
-    origin: "https://online-coding-web-client.vercel.app",
+    // origin: "https://online-coding-web-client.vercel.app",
+    origin: "*",
     methods: ["GET", "POST"],
     transports: ["websocket"],
     credentials: true,
