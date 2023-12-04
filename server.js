@@ -25,12 +25,12 @@ connectDB();
 const server = http.createServer(app);
 
 const io = new Server(server, {
-  // cors: {
-  origin: "https://online-coding-web-client.vercel.app",//client
-  methods: ["GET", "POST"],
-  transports: ["websocket", "polling"],
-  credentials: true,
-  //  },
+  cors: {
+    origin: "https://online-coding-web-client.vercel.app",
+    methods: ["GET", "POST"],
+    transports: ["websocket"],
+    credentials: true,
+  },
 });
 
 let userCount = 0;
