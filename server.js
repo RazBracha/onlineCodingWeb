@@ -33,6 +33,8 @@ const io = new Server(server, {
     origin: "*",
     methods: ["GET", "POST"],
     transports: ["websocket"],
+    preflightContinue: false,
+    preflightContinue: 204,
     credentials: true,
   },
 });
