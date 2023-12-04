@@ -24,6 +24,7 @@ connectDB();
 const server = http.createServer(app);
 
 const io = new Server(server, {
+  transports: ["websocket"],
   cors: {
     origin: "https://online-coding-web-client.vercel.app",//client
     methods: ["GET", "POST"],
