@@ -5,7 +5,7 @@ const express = require("express");
 const http = require("http");
 const cors = require("cors");
 
-// const { Server } = require("socket.io");
+const { Server } = require("socket.io");
 
 const connectDB = require('./configs/db');
 const codeBlockRouter = require('./routers/codeBlockRouter');
@@ -28,14 +28,11 @@ connectDB();
 
 const server = http.createServer(app);
 
-const io = require("socket.io")(server, {
+const io = new Server(server, {
   cors: {
     // origin: "https://online-coding-web-client.vercel.app",
     // origin: "http://localhost:3000", //client
-    // origin: "https://onlinecodingwebclient-production.up.railway.app",
-    origin: "*",
-    // methods: ["GET", "POST"],
-    methods: "*",
+    origin: "https://onlinecodingwebclient-production.up.railway.app",
     credentials: true,
   },
 });
