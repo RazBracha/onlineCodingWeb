@@ -28,7 +28,8 @@ const io = new Server(server, {
   cors: {
     // origin: "https://online-coding-web-client.vercel.app",
     // origin: "http://localhost:3000", //client
-    origin: "https://onlinecodingwebclient-production.up.railway.app",
+    // origin: "https://onlinecodingwebclient-production.up.railway.app",
+    origin: "*",
     methods: ["GET", "POST"],
     credentials: true,
   },
