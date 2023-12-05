@@ -16,9 +16,6 @@ const app = express();
 app.use(cors());
 app.use(express.json())
 
-codeBlockRouter.use(cors());
-users.use(cors());
-
 // routers
 app.use('/codeblocks', codeBlockRouter)
 app.use('/users', users)
@@ -30,10 +27,8 @@ const server = http.createServer(app);
 const io = new Server(server, {
   cors: {
     origin: "https://online-coding-web-client.vercel.app",
+    // origin: "http://localhost:3000", //client
     methods: ["GET", "POST"],
-    transports: ["websocket"],
-    preflightContinue: false,
-    preflightContinue: 204,
     credentials: true,
   },
 });

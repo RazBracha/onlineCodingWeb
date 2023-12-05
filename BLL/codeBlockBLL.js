@@ -2,7 +2,7 @@ const CodeBlock = require('../models/codeblockModel');
 
 
 
-const getAllCodeBloks = () => {
+const getAllCodeBlocks = () => {
   return CodeBlock.find();
 };
 
@@ -14,4 +14,4 @@ const setMentorId = (id, userId) => {
   return CodeBlock.findByIdAndUpdate(id, { mentorId: userId })
 }
 
-module.exports = { getAllCodeBloks, getCodeBlockById, setMentorId }
+module.exports = { getAllCodeBlocks, getCodeBlockById, setMentorId }
