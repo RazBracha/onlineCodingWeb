@@ -24,6 +24,7 @@ app.use((req, res) => {
   res.header('Access-Control-Allow-Headers', '*');
   res.header('Access-Control-Allow-Origin', 'https://onlinecodingwebclient-production.up.railway.app');
   res.header('Access-Control-Allow-Methods', 'OPTIONS,GET,HEAD,PUT,PATCH,POST,DELETE');
+  next();
 });
 app.use(express.json())
 
