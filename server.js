@@ -23,12 +23,7 @@ app.use((req, res, next) => {
   }
   next();
 })
-app.use((req, res) => {
-  res.header('Access-Control-Allow-Headers', '*');
-  res.header('Access-Control-Allow-Origin', 'https://onlinecodingwebclient-production.up.railway.app');
-  res.header('Access-Control-Allow-Methods', 'OPTIONS,GET,HEAD,PUT,PATCH,POST,DELETE');
-  next();
-});
+
 app.use(express.json())
 
 // routers
@@ -42,8 +37,8 @@ const server = http.createServer(app);
 const io = new Server(server, {
   cors: {
     // origin: "https://online-coding-web-client.vercel.app",
-    // origin: "http://localhost:3000", //client
-    origin: "https://onlinecodingwebclient-production.up.railway.app",
+    origin: "http://localhost:3000", //client
+    // origin: "https://onlinecodingwebclient-production.up.railway.app",
     credentials: 'same-origin',
     optionSuccessStatus: 200,
   },
