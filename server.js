@@ -12,7 +12,13 @@ const codeBlockRouter = require('./routers/codeBlockRouter');
 const users = require('./routers/userRouter')
 
 const app = express();
-
+app.use((req, res, next) => {
+  if (req.method == "OPTIONS") {
+    res.status(200);
+    return;
+  }
+  next();
+})
 app.use(cors());
 app.use((req, res) => {
   res.header('Access-Control-Allow-Headers', '*');
