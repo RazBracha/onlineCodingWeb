@@ -33,7 +33,7 @@ const io = new Server(server, {
     // origin: "https://online-coding-web-client.vercel.app",
     // origin: "http://localhost:3000", //client
     origin: "http://onlinecodingwebclient-production.up.railway.app",
-    //credentials: true,
+    credentials: true,
   },
 });
 
