@@ -15,7 +15,8 @@
                 "POST"
             ],
             "headers": {
-                "Access-Control-Allow-Origin": "*"
+                "Access-Control-Allow-Origin": "*",
+                "Access-Control-Allow-Methods": "GET, OPTIONS, POST, PUT"
             }
         }
     ]
