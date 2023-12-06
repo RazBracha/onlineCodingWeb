@@ -15,7 +15,7 @@ const app = express();
 
 app.use(cors());
 app.use((req, res) => {
-  res.header("Access-Control-Allow-Headers", 'Origin, Content-Type, X-Auth-Token, content-type');
+  res.header('Access-Control-Allow-Headers', '*');
   res.header('Access-Control-Allow-Origin', 'https://onlinecodingwebclient-production.up.railway.app');
   res.header('Access-Control-Allow-Methods', 'OPTIONS,GET,HEAD,PUT,PATCH,POST,DELETE');
 });
