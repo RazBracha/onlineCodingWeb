@@ -15,8 +15,8 @@ const app = express();
 
 app.use(cors());
 app.use((req, res) => {
-  res.header('Access-Control-Allow-Origin', '*');
-  res.header('Access-Control-Allow-Methods', '*');
+  res.header('Access-Control-Allow-Origin', 'https://onlinecodingwebclient-production.up.railway.app');
+  res.header('Access-Control-Allow-Methods', 'OPTIONS,GET,HEAD,PUT,PATCH,POST,DELETE');
 });
 app.use(express.json())
 
@@ -33,7 +33,6 @@ const io = new Server(server, {
     // origin: "https://online-coding-web-client.vercel.app",
     // origin: "http://localhost:3000", //client
     origin: "https://onlinecodingwebclient-production.up.railway.app",
-    methods: "OPTIONS,GET,HEAD,PUT,PATCH,POST,DELETE",
     credentials: 'same-origin',
   },
 });
