@@ -20,8 +20,8 @@ const server = http.createServer(app);
 
 const io = new Server(server, {
   cors: {
-    origin: "http://localhost:3000", //client
-    // origin: "https://onlinecodingwebclient-production.up.railway.app",
+    // origin: "http://localhost:3000", //client
+    origin: "https://onlinecodingwebclient-production.up.railway.app",
     credentials: 'same-origin',
     optionSuccessStatus: 200,
   },
